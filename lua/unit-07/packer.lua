@@ -49,6 +49,8 @@ return require('packer').startup(function(use)
         end
     }
 
+    use 'sbdchd/neoformat'
+
     use('jose-elias-alvarez/null-ls.nvim')
     use('MunifTanjim/prettier.nvim')
 
