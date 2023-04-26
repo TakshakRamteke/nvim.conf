@@ -1,18 +1,10 @@
-local lsp = require('lsp-zero').preset({"recommended"})
+local lsp = require('lsp-zero')
+
+lsp.preset({"recommended"})
 
 lsp.ensure_installed({
     'tsserver',
     'eslint',
-})
-
-lsp.configure('lua-language-server', {
-    settings = {
-        Lua = {
-            diagnostics = {
-                globals = { 'vim' }
-            }
-        }
-    }
 })
 
 local cmp = require('cmp')
