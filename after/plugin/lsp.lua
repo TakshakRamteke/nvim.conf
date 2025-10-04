@@ -33,7 +33,8 @@ lsp.on_attach(function(client, bufnr)
     vim.keymap.set("i", "<C-h>", function() vim.lsp.buf.signature_help() end, opts)
 end)
 
-require('lspconfig').lua_ls.setup(lsp.nvim_lua_ls())
+vim.lsp.config("lua_ls",{})
+vim.lsp.enable({"lua_ls"})
 
 lsp.setup_nvim_cmp({
     mapping = cmp_mappings
